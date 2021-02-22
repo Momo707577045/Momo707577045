@@ -1,7 +1,7 @@
 name: Build README # 工作流程名
 
 on: # 触发条件
-  push: # 推送
+  issues: # 提交评论
   schedule: # 定时执行
     - cron:  '0 0 * * *' # 分 时 天 月 星期几
 
