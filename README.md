@@ -1,4 +1,4 @@
-<img align="right" alt="Momo's GitHub stats" src="http://upyun.luckly-mjw.cn/Assets/github-profile/4.png!/crop/630x600a0a30" height="180px"/>
+<img align="right" alt="Momo's GitHub stats" src="http://upyun.luckly-mjw.cn/Assets/github-profile/4.png!/crop/630x600a0a0" height="180px"/>
 
 #### <img src='https://qpluspicture.oss-cn-beijing.aliyuncs.com/6LjjQA/Hi.gif' alt='Hi' width="20"/> Hi，我是静文
 - 💡  「二八原则」践行者，「引导型」教育者。
