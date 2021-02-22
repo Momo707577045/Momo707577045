@@ -1,0 +1,33 @@
+name: Build README # 工作流程名
+
+on: # 触发条件
+  push: # 推送
+  schedule: # 定时执行
+    - cron:  '0 0 * * *' # 分 时 天 月 星期几
+
+jobs: # 执行的任务
+  build: # 任务 id
+    name: build # 任务名，可以不与 id 重名
+    runs-on: ubuntu-latest # 执行任务时，依赖的服务环境
+    steps: # 任务执行的步骤
+    - name: Check out repo # 步骤名，【拉取代码】
+      uses: actions/checkout@v2 # 使用的第三方库任务 @ref
+    - name: Set up NodeJS # 【配置 NodeJS 环境】
+      uses: actions/setup-node@v2
+      with: # 使用第三方库任务时，传入的参数。由库开发者自定义
+        node-version: '12'
+    - name: Update README # 更新 readme
+      env:
+        GH_TOKEN: ${{ secrets.ACCESS_TOKEN }} # 秘钥参数
+      run: |- # yaml 语法，「|」下面字符串，每个都换行(\n)。「>」下面字符串，每个不换行（变成空格）。「+」保留最后结尾的换行，「-」表示删除最后结尾的换行。
+        node index.js
+        cat README.md
+    - name: Commit and push # 更新 readme
+      run: |-
+        git diff
+        git config --global user.email "707577045@qq.com"
+        git config --global user.name "Momo707577045"
+        git pull
+        git add -A
+        git commit -m "Updated content" || exit 0
+        git push

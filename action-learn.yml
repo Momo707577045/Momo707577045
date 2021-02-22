@@ -1,0 +1,42 @@
+name: Build README # 工作流程名
+
+on: # 触发条件
+  push: # 推送
+  schedule: # 定时执行
+    - cron:  '0 0 * * *' # 分 时 天 月 星期几
+
+jobs: # 执行的任务
+  build: # 任务 id
+    name: build # 任务名，可以不与 id 重名
+    runs-on: ubuntu-latest # 执行任务时，依赖的服务环境
+    steps: # 任务执行的步骤
+    - name: Check out repo # 步骤名，【拉取代码】
+      uses: actions/checkout@v2 # 使用的第三方库任务 @ref
+    - name: Set up Python # 【配置python环境】
+      uses: actions/setup-python@v2
+      with: # 使用第三方库任务时，传入的参数。由库开发者自定义
+        python-version: 3.8
+    - name: Configure pip caching # 【构建缓存】
+      uses: actions/cache@v2
+      with: # 使用第三方库任务时，传入的参数。由库开发者自定义
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+    - name: Install Python dependencies # 【设置 python 依赖】
+      run: python -m pip install -r requirements.txt # 执行的 shell 命令，每个 run 关键词代表运行器环境中一个新的进程和 shell。 当您提供多行命令时，每行都在同一个 shell 中运行。
+    - name: Update README # 更新 readme
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      run: |- # yaml 语法，「|」下面字符串，每个都换行(\n)。「>」下面字符串，每个不换行（变成空格）。「+」保留最后结尾的换行，「-」表示删除最后结尾的换行。
+        python build_readme.py
+        cat README.md
+    - name: Commit and push if changed # 如果有变化，则推送readme
+      run: |-
+        git diff
+        git config --global user.email "xxx"
+        git config --global user.name "xxx"
+        git pull
+        git add -A
+        git commit -m "Updated content" || exit 0
+        git push
