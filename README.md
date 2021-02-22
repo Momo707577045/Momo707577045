@@ -20,5 +20,5 @@
 
 <img align="right" alt="Momo's GitHub stats" src="http://upyun.luckly-mjw.cn/Assets/github-profile/6.png" height="190px"/>
 
-<img align="left" alt="Momo's GitHub stats" src="https://github-readme-stats.vercel.app/api?username=Momo707577045&show_icons=true&hide_border=true&cache_seconds=1900&theme=vue-dark" border="1px"/>
+<img align="left" alt="Momo's GitHub stats" src="https://github-readme-stats.vercel.app/api?username=Momo707577045&show_icons=true&hide_border=true&cache_seconds=1900&theme=vue-dark" width="450"/>
 
