@@ -23,3 +23,6 @@
 
 <img align="right" alt="Momo's GitHub stats" src="http://upyun.luckly-mjw.cn/Assets/github-profile/54.png" height="180px"/>
 
+#### 🎉 赞赏咖啡？
+
+<img align="left" alt="Momo's GitHub stats" src="./qrcode.jpeg"/>
