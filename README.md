@@ -45,4 +45,4 @@
 
 #### 🎉 赞赏咖啡？
 
-<img alt="Momo's GitHub stats" src="./qrcode.jpeg" width="600"/>
+<img alt="Momo's GitHub stats" src="./qrcode.png" width="600"/>
