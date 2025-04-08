@@ -36,6 +36,12 @@
 ㅤ  
 
 
+#### 💡社区交流
+
+
+<img alt="社区交流群" src="https://upyun.luckly-mjw.cn/Assets/qrcode/tools.png?v=1744097215946" width="466"/>
+
+
 #### 🎉 赞赏咖啡？
 
 
