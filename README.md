@@ -15,7 +15,7 @@
 - 📦  [`tinypng-script-with-cache`](https://github.com/Momo707577045/tinypng-script-with-cache) 带缓存的图片压缩一键脚本。
 - 📂  [`github-directory-downloader`](https://github.com/Momo707577045/github-directory-downloader) github 特定文件、文件夹下载工具。
 - 🔧  [`front-bug-tool`](https://segmentfault.com/a/1190000017271720) 前端修bug神器「bug信息收集系统」。
-- 📽  [`media-source-extract`](https://segmentfault.com/a/1190000025182822) 无差别视频提取工具。
+- 📽  [`media-source-extract`](https://github.com/Momo707577045/media-source-extract) 无差别视频提取工具。
 
 #### 🔰 统计卡牌  
 
@@ -39,7 +39,7 @@
 #### 💡社区交流
 
 
-<img alt="社区交流群" src="https://upyun.luckly-mjw.cn/Assets/qrcode/tools.png?v=1744097215946" width="466"/>
+<img alt="社区交流群" src="./tools.jpeg?v=1744097215946" width="466"/>
 
 
 #### 🎉 赞赏咖啡？
