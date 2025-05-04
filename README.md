@@ -40,7 +40,7 @@
 
 *群已满员，请添加 mjw707577045 加群*
 
-<img alt="社区交流群" src="./tools.jpeg?v=1744097215946" width="466"/>
+<img alt="社区交流群" src="./tools.png" width="466"/>
 
 
 #### 🎉 赞赏咖啡？
