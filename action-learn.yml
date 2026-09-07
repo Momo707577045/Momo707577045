@@ -11,13 +11,13 @@ jobs: # 执行的任务
     runs-on: ubuntu-latest # 执行任务时，依赖的服务环境
     steps: # 任务执行的步骤
     - name: Check out repo # 步骤名，【拉取代码】
-      uses: actions/checkout@v2 # 使用的第三方库任务 @ref
+      uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v2.7.0
     - name: Set up Python # 【配置python环境】
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@13ae5bb136fac2878aff545f9edd820918ce6697 # v2.3.1
       with: # 使用第三方库任务时，传入的参数。由库开发者自定义
         python-version: 3.8
     - name: Configure pip caching # 【构建缓存】
-      uses: actions/cache@v2
+      uses: actions/cache@88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8 # v2.1.7
       with: # 使用第三方库任务时，传入的参数。由库开发者自定义
         path: ~/.cache/pip
         key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
